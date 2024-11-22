@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const ReusableCard = ({ title, description, image }) => {
+const ProfileCard = ({ name, image, description }) => {
     return (
         <div style={styles.card}>
-            <img src={image} alt={title} style={styles.image} />
-            <h3>{title}</h3>
+            <img src={image} alt={`${name}`} style={styles.image} />
+            <h2>{name}</h2>
             <p>{description}</p>
         </div>
     );
@@ -12,18 +12,20 @@ const ReusableCard = ({ title, description, image }) => {
 
 const styles = {
     card: {
-        border: "1px solid #ddd",
-        borderRadius: "8px",
-        padding: "16px",
-        textAlign: "center",
-        maxWidth: "300px",
+        border: '1px solid #ddd',
+        borderRadius: '10px',
+        padding: '20px',
+        width: '300px',
+        textAlign: 'center',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
     },
     image: {
-        width: "100%",
-        height: "200px",
-        objectFit: "cover",
-        borderRadius: "8px",
+        width: '100px',
+        height: '100px',
+        borderRadius: '50%',
+        objectFit: 'cover',
+        marginBottom: '10px',
     },
 };
 
-export default ReusableCard;
+export default ProfileCard;
